@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title><{$xoops_sitename}>: <{$xoops_pagetitle}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body> 
+<div id="wrapper"> 
+  <table cellspacing="0"> 
+    <tr id="header"> 
+      <td>&nbsp;</td> 
+    </tr> 
+    <tr> 
+      <td id="headerbar" colspan="2"><a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a>&nbsp;|&nbsp;<a href="#" title="Put your keyword rich title here!">Link</a></td> 
+    </tr> 
+  </table> 
+  <table cellspacing="0" id="mainbody"> 
+    <tr> 
+      <td id="centercolumn"> <div id="bannerads"><{$xoops_banner}></div> 
+        <!-- Display center blocks if any --> 
+<{if $xoops_showcblock == 1}> 
+        <table cellspacing="0"> 
+          <tr> 
+            <td id="centerCcolumn" colspan="2"> <!-- Start center-center blocks loop --> 
+<{foreach item=block from=$xoops_ccblocks}> 
+              <div style="padding: 5px;"> 
+                <fieldset> 
+                <legend class="blockTitle"><{$block.title}></legend> 
+                <div class="blockContent"><{$block.content}></div> 
+                </fieldset> 
+              </div> 
+<{/foreach}> 
+              <!-- End center-center blocks loop --> </td> 
+          </tr> 
+          <tr> 
+            <td id="centerLcolumn"> <!-- Start center-left blocks loop --> 
+<{foreach item=block from=$xoops_clblocks}> 
+              <div style="padding: 0px 0px 0px 8px;"> 
+                <fieldset> 
+                <legend class="blockTitle"><{$block.title}></legend> 
+                <div class="blockContent"><{$block.content}></div> 
+                </fieldset> 
+              </div> 
+<{/foreach}> 
+              <!-- End center-left blocks loop --> </td> 
+            <td id="centerRcolumn"> <!-- Start center-right blocks loop --> 
+<{foreach item=block from=$xoops_crblocks}> 
+              <div style="padding: 0px 5px 0px 0px;"> 
+                <fieldset> 
+                <legend class="blockTitle"><{$block.title}></legend> 
+                <div class="blockContent"><{$block.content}></div> 
+                </fieldset> 
+              </div> 
+<{/foreach}> 
+              <!-- End center-right blocks loop --> </td> 
+          </tr> 
+        </table> 
+<{/if}> 
+        <!-- End display center blocks --> 
+        <div id="content"> <{$xoops_contents}> </div></td> 
+      <td id="rightcolumn"> <div> <img src="<{$xoops_imageurl}>/images/rcoltop.jpg" height="175" width="175" alt="" /> </div> 
+        <!-- Start left blocks loop --> 
+<{foreach item=block from=$xoops_lblocks}> 
+        <div style="padding: 0px 5px 0px 0px;"> 
+          <div class="blockTitle"><{$block.title}></div> 
+          <div class="blockContent"><{$block.content}></div> 
+        </div> 
+<{/foreach}> 
+        <!-- End left blocks loop --> 
+<{if $xoops_showrblock == 1}> 
+        <!-- Start right blocks loop --> 
+<{foreach item=block from=$xoops_rblocks}> 
+        <div style="padding: 0px 5px 0px 0px;"> 
+          <div class="blockTitle"><{$block.title}></div> 
+          <div class="blockContent"><{$block.content}></div> 
+        </div> 
+<{/foreach}> 
+        <!-- End right blocks loop --> 
+<{/if}> </td> 
+    </tr> 
+  </table> 
+  <table cellspacing="0"> 
+    <tr> 
+      <td id="footerbar"><{$xoops_footer}>&nbsp;|&nbsp;Design by <a href="http://mywebresource.com/" target="_blank" title="MyWebResource: Webmaster Articles, Webmaster News, Webmaster Resources">MyWebResource</a></td> 
+    </tr> 
+  </table> 
+</div> 
+</body>
+</html>
